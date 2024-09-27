@@ -1,0 +1,19 @@
+# Whatsapp Cloud API
+WEBHOOK_VERIFY_TOKEN = ""
+GRAPH_API_TOKEN = ""
+PHONE_ID = "" 
+
+# Bot Aliado API
+BOTALIADO_API_URL = ""
+BOTALIADO_API_KEY = ""
+BOTALIADO_USER_ID = ""
+
+#Azure Services
+SPEECH_API_KEY = ""
+SPEECH_API_REGION = ""
+
+#Sql database
+SQL_USERNAME = ""
+SQL_PASSWORD = ""
+SQL_SERVER = ""
+SQL_DATABSE = ""
