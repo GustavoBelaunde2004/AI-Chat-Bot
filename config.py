@@ -46,7 +46,3 @@ def get_settings() -> Settings:
     the application lifetime.
     """
     return Settings()
-
-# # Test
-# a = get_settings()
-# print(a.model_dump())
