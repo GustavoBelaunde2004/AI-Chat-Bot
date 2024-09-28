@@ -1,31 +1,34 @@
 # AI-Chat-Bot
-Este proyecto es un bot de WhatsApp diseñado para interactuar con los usuarios mediante mensajes de texto y de voz. El bot está desplegado en un Azure Web App Service y utiliza Bot ALiado API creada con OpenAI para responder preguntas acerca de Campañas y Plin de Interbank. El bot también almacena información de los usuarios en una base de datos SQL en Azure.
-## Pasos previos
+This project is a WhatsApp bot designed to interact with users through text and voice messages. The bot is deployed on an Azure Web App Service and uses Bot ALiado API created with OpenAI to answer questions about Interbank. The bot also stores user information in a SQL database on Azure.
+## Previous steps
 ### APIS
 1. Bot Aliado API:
-    1. Registrarse en [Bot Aliado API](https://aci-aliado-api.politebeach-527e58d4.eastus2.azurecontainerapps.io/) y obtener un API key.
+    1. Request for a Bot Aliado API key.
 2. Whatsapp Cloud API:
-    1. Registrarse en [Meta for Developers](https://developers.facebook.com/?no_redirect=1)
-    2. Crear una aplicacion y seguir pasos para obtener un API key.
+    1. Register in [Meta for Developers](https://developers.facebook.com/?no_redirect=1)
+    2. Create an app and follow steps to obatin API key.
 3. Azure Speech API
-    1. Registrarse en [Azure Speech](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/) y obtener API key.
-### Requerimientos python
-1. Instalar el archivo requirements.txt
-2. Crear el archivo ***.env*** según el template.
-### Requerimientos en Azure Web App Service
-1. Definir Startup Commnad: gunicorn -w 4 -k uvicorn.workers.UvicornWorker app:app
+    1. Register in [Azure Speech](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/) and obtain API key.
+### Python requirements
+1. Install requirements.txt
+2. Create ***.env*** file following the template.
+### Azure Web App Service Requirements
+1. Define Startup Commnad: gunicorn -w 4 -k uvicorn.workers.UvicornWorker app:app
 
-## Sobre el código
--***app.py***: Este archivo configura la aplicación FastAPI y los manejadores de eventos de WhatsApp.
+## Project Files Description
 
--***bot_aliado.py***: Contiene la lógica para interactuar con la API de Bot Aliado.
+- **`app.py`**: Sets up the FastAPI application and the event handlers for WhatsApp.
 
--***database.py***: Maneja las operaciones con la base de datos SQL de Azure utilizando aioodbc.
+- **`bot_aliado.py`**: Contains the logic to interact with the Bot Aliado API.
 
--***services.py***: Contiene funciones auxiliares, incluyendo la lógica para manejar las interacciones del bot, convertir texto a audio, y más.
+- **`config.py`**: Manages the application's configuration, loading values from the `.env` file.
 
--***config.py***: Administra la configuración de la aplicación, cargando los valores desde el archivo .env.
+- **`database.py`**: Manages operations with the Azure SQL database using `aioodbc`.
 
--***logger.py***: Configura y proporciona un logger para la aplicación.
+- **`logger.py`**: Sets up and provides a logger for the application.
 
--***speech.py***: Utiliza servicios externos para convertir texto a audio y maneja la manipulación de archivos de audio.
+- **`services.py`**: Contains helper functions, including logic to handle bot interactions, text-to-speech conversion, and more.
+
+- **`speech.py`**: Uses external services to convert text to audio and handles audio file manipulation.
+
+## Feel free to contact me if you have any questions!
